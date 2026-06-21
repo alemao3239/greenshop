@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weed Marketplace - Neon Modern</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      background: #00ffcc;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 0 2px 10px rgba(0, 255, 204, 0.3);
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      background: #000;
+      padding: 10px 0;
+      border-bottom: 2px solid #00ffcc;
+    }
+
+    .menu a {
+      color: #00ffcc;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      transition: background 0.3s;
+    }
+
+    .menu a:hover {
+      background: #00ffcc;
+      color: #000;
+      border-radius: 5px;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .product {
+      background: #111;
+      border: 2px solid #00ffcc;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .product h3 {
+      color: #00ffcc;
+      font-size: 18px;
+    }
+
+    .product p {
+      color: #ccc;
+      font-size: 14px;
+    }
+
+    .product video {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .product .price {
+      font-size: 16px;
+      color: #00ffcc;
+      font-weight: bold;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .tabs button {
+      background: #000;
+      color: #00ffcc;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .tabs button.active {
+      background: #00ffcc;
+      color: #000;
+    }
+
+    .tab-content {
+      display: none;
+      flex: 1;
+    }
+
+    .tab-content.active {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    footer {
+      background: #000;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Neon Weed Market</h1>
+  </header>
+
+  <div class="menu">
+    <a href="#amnesia-haze">Amnesia Haze</a>
+    <a href="#lemon-haze">Lemon Haze</a>
+    <a href="#cali-face-tz-usa">Cali Face TZ USA</a>
+    <a href="#cali-secret-sauce-usa">Cali Secret Sauce USA</a>
+    <a href="#cali-black-cherry-punch">Cali Black Cherry Punch</a>
+    <a href="#cali-animal-mints-canada">Cali Animal Mints Canada</a>
+  </div>
+
+  <div class="main-content">
+    <div id="amnesia-haze" class="product">
+      <h3>Amnesia Haze</h3>
+      <div class="tabs">
+        <button class="active" onclick="showTab('amnesia-haze-video')">Video</button>
+        <button onclick="showTab('amnesia-haze-info')">Info</button>
+      </div>
+      <div id="amnesia-haze-video" class="tab-content active">
+        <video autoplay loop muted>
+          <source src="amnesia-haze.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div id="amnesia-haze-info" class="tab-content">
+        <p>Amnesia Haze is a classic sativa strain known for its uplifting and energizing effects. Perfect for daytime use.</p>
+        <div class="price">$350 per gram</div>
+      </div>
+    </div>
+
+    <div id="lemon-haze" class="product">
+      <h3>Lemon Haze</h3>
+      <div class="tabs">
+        <button class="active" onclick="showTab('lemon-haze-video')">Video</button>
+        <button onclick="showTab('lemon-haze-info')">Info</button>
+      </div>
+      <div id="lemon-haze-video" class="tab-content active">
+        <video autoplay loop muted>
+          <source src="lemon-haze.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div id="lemon-haze-info" class="tab-content">
+        <p>Lemon Haze is a powerful sativa strain with a citrusy aroma and energizing effects. Great for focus and creativity.</p>
+        <div class="price">$380 per gram</div>
+      </div>
+    </div>
+
+    <div id="cali-face-tz-usa" class="product">
+      <h3>Cali Face TZ USA</h3>
+      <div class="tabs">
+        <button class="active" onclick="showTab('cali-face-tz-usa-video')">Video</button>
+        <button onclick="showTab('cali-face-tz-usa-info')">Info</button>
+      </div>
+      <div id="cali-face-tz-usa-video" class="tab-content active">
+        <video autoplay loop muted>
+          <source src="cali-face-tz-usa.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div id="cali-face-tz-usa-info" class="tab-content">
+        <p>Cali Face TZ USA is a high-quality indica strain with a strong body high and relaxing effects. Ideal for evening use.</p>
+        <div class="price">$420 per gram</div>
+      </div>
+    </div>
+
+    <div id="cali-secret-sauce-usa" class="product">
+      <h3>Cali Secret Sauce USA</h3>
+      <div class="tabs">
+        <button class="active" onclick="showTab('cali-secret-sauce-usa-video')">Video</button>
+        <button onclick="showTab('cali-secret-sauce-usa-info')">Info</button>
+      </div>
+      <div id="cali-secret-sauce-usa-video" class="tab-content active">
+        <video autoplay loop muted>
+          <source src="cali-secret-sauce-usa.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div id="cali-secret-sauce-usa-info" class="tab-content">
+        <p>Cali Secret Sauce USA is a premium indica strain with a rich, earthy flavor and deep relaxing effects.</p>
+        <div class="price">$450 per gram</div>
+      </div>
+    </div>
+
+    <div id="cali-black-cherry-punch" class="product">
+      <h3>Cali Black Cherry Punch</h3>
+      <div class="tabs">
+        <button class="active" onclick="showTab('cali-black-cherry-punch-video')">Video</button>
+        <button onclick="showTab('cali-black-cherry-punch-info')">Info</button>
+      </div>
+      <div id="cali-black-cherry-punch-video" class="tab-content active">
+        <video autoplay loop muted>
+          <source src="cali-black-cherry-punch.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div id="cali-black-cherry-punch-info" class="tab-content">
+        <p>Cali Black Cherry Punch is a hybrid strain with a sweet and fruity aroma, known for its balanced effects.</p>
+        <div class="price">$400 per gram</div>
+      </div>
+    </div>
+
+    <div id="cali-animal-mints-canada" class="product">
+      <h3>Cali Animal Mints Canada</h3>
+      <div class="tabs">
+        <button class="active" onclick="showTab('cali-animal-mints-canada-video')">Video</button>
+        <button onclick="showTab('cali-animal-mints-canada-info')">Info</button>
+      </div>
+      <div id="cali-animal-mints-canada-video" class="tab-content active">
+        <video autoplay loop muted>
+          <source src="cali-animal-mints-canada.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div id="cali-animal-mints-canada-info" class="tab-content">
+        <p>Cali Animal Mints Canada is a unique hybrid with a minty aroma and a balanced high, perfect for both relaxation and focus.</p>
+        <div class="price">$430 per gram</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Neon Weed Market | Payment handled via inbox</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tabs button');
+      const contents = document.querySelectorAll('.tab-content');
+
+      tabs.forEach(btn => btn.classList.remove('active'));
+      contents.forEach(content => content.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      document.querySelector(`button[onclick="showTab('${tabId}')"]`).classList.add('active');
+    }
+  </script>
+</body>
+</html>
